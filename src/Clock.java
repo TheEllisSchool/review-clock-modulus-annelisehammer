@@ -14,8 +14,24 @@ public class Clock {
 		//take colon to end of string and make it an integer
 		int minutes = Integer.parseInt(answer.substring(colonInd + 1, answer.length()));
 		//check that it came in correctly
-		//System.out.println("Hours: " + hours);
-		//System.out.println("Minutes: " + minutes);
+		System.out.println("Hours: " + hours);
+		System.out.println("Minutes: " + minutes);
+		
+		String answer1 = JOptionPane.showInputDialog
+				(null, "Give me an amount of minutes (ex: 230)");
+		int userTime = Integer.parseInt(answer1);
+		int minutes1;
+		minutes1 = userTime % 60;
+		int hours1;
+		hours1= userTime / 60;
+		int finalHours;
+		finalHours= hours+hours1;
+		int finalMinutes;
+		finalMinutes= minutes + minutes1;
+		
+		
+		JOptionPane.showInputDialog(null, "Your final time is " + finalHours + " " +finalMinutes);
+		
 		
 		
 		
